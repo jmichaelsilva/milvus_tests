@@ -17,7 +17,7 @@ services:
 
     milvus_wr:        
         restart: always
-        image: milvusdb/milvus:0.10.5-cpu-d010621-4eda95
+        image: milvusdb/milvus:1.1.0-cpu-d050721-5e559c
         volumes:
             - /tmp/milvus/db:/var/lib/milvus/db
             - ./wr_server.yml:/var/lib/milvus/conf/server_config.yaml
@@ -27,7 +27,7 @@ services:
 
     milvus_ro:        
         restart: always
-        image: milvusdb/milvus:0.10.5-cpu-d010621-4eda95
+        image: milvusdb/milvus:1.1.0-cpu-d050721-5e559c
         volumes:
             - /tmp/milvus/db:/var/lib/milvus/db
             - ./ro_server.yml:/var/lib/milvus/conf/server_config.yaml
@@ -47,7 +47,7 @@ services:
 
     mishards:
         restart: always
-        image: milvusdb/mishards:0.10.5
+        image: milvusdb/mishards:1.1.0
         ports:
             - "0.0.0.0:19531:19531"
             - "0.0.0.0:19532:19532"
